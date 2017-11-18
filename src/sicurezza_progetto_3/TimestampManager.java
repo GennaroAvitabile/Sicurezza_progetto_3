@@ -56,7 +56,7 @@ public class TimestampManager {
     Viene poi inserito nella Map con una certa chiave e il valore la TSARequest.
     */
     public void generateRequest(User user, byte[] message){
-        
+        //provaeisa
     }
     
     /*
