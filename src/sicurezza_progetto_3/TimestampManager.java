@@ -61,7 +61,7 @@ public class TimestampManager {
     massimo consentito (8) chiama sendRequests.
     */
     public void generateRequest(User user, byte[] message){
-        
+        //provaeisa
     }
     
     /*Manda la map di richieste al server TSA e salva le risposte nella mappa
