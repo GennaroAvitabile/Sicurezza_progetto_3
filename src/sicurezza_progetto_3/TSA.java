@@ -52,25 +52,25 @@ public class TSA {
         this.timeframe += 1;
     }
     
-    /*Il metodo riceve la Map di richieste a cui apporre il timestamp. Per ogni richiesta,
+    /*Il metodo riceve l'array di richieste a cui apporre il timestamp. Per ogni richiesta,
     decifra il contenuto (con la propria chiave privata RSA), verifica la firma (con la chiave pubblica DSA dell'utente),
     calcola il time stamp, calcola H(h(D)). Costruisce poi il MerkelTree e mette
     in rootHash[timeframe] HV e in superRootHash[timeframe] SHV. Per ciascuna 
     risposta valuta le informazioni da dare per poter consentire all'utente di 
     verificare se HV e SHV sono corretti. Mette infine tutte queste informazioni in un JSONObject
     da passare al costruttore di TSAResponse. In particolare:
-    1)Timestamp t;
-    2)userID;
-    3)serialNumber;
-    4)originalMessageDigest;
-    5)TSADigest;
-    6)verifyInformations;
+    1)Timestamp t (TimeStamp);
+    2)userID (String);
+    3)serialNumber (int);
+    4)originalMessageDigest (byte[]);
+    5)TSADigest (byte[]);
+    6)verifyInformation (è un ArrayList di ArrayList, ciascuno contenente 3 tuple);
     In TSAResponse il JSONObect viene convertito in stringa, firmato con la propria
     chiave privata DSA e cifrato con la chiave RSA pubblica dell'utente.
     Se il numero di richieste è inferiore a 8 il metodo deve inserire nel Merkel
     Tree i nodi rimanenti con hash fittizi.*/
     
-    public HashMap<String,TSAResponse> generateTimestamp(HashMap<String,TSARequest> requests){
+    public HashMap<String,TSAResponse> generateTimestamp(ArrayList<TSARequest> requests){
         
     }
 }

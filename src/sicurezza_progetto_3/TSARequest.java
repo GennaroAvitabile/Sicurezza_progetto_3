@@ -9,14 +9,16 @@ package sicurezza_progetto_3;
 
  */
 public class TSARequest {
-    public String Info;
+    public String info;
     public byte[] sign;
     public String signType;
     
-    /*Riceve il JSONObject e l'oggetto user. Converte il JSON object in stringa, lo firma
-    usando la chiave privata DSA dell'user e lo cifra usando la chiave RSA pubblica del server TSA.
+    /*Riceve l'oggetto user e l'oggetto JSON contente id utente e hash message. 
+    Lo converte in byte, lo firma 
+    usando la propria chiave DSA privata, lo cifra con la chiave RSA pubblica 
+    del server TSA, e lo converte in stringa mettendolo nel campo info    
     */
-    public TSARequest(JSONObject j, User u){
+    public TSARequest(User user, JSONObject j){
         
     }
 }
